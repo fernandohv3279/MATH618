@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\title{MATH 618: Homework 3}
+\author{Fernando}
+\date{October 17, 2023}
+\begin{document}
+\maketitle
+\section{Problem 1}
+Let $T_nf\coloneqq\delta_{\frac{1}{n}}\cdot f$ where $\delta_{a}(x)=\begin{cases}
+1 &\text{ if } x=a\\
+0 &\text{ otherwise}
+\end{cases}$, in other words:
+\[ (T_nf)(x)=\begin{cases}
+f(\frac{1}{n}) &\text{ if } x=\frac{1}{n}\\
+0 &\text{ otherwise}
+\end{cases}.
+\]
+$T_n$ is clearly linear because we are dealing with pointwise multiplication:
+\[
+T_n(cf+g)=\delta_{\frac{1}{n}}\cdot(cf+g)=c\delta_{\frac{1}{n}}\cdot
+f+\delta_{\frac{1}{n}}\cdot g=cT_nf+T_ng
+\]
+Also it is easy to see that:
+\begin{align*}
+||T_n||_{\mathcal{A}}=\sup_{||f||_{L_\infty}=1}||T_nf||_{L_\infty}
+&=\sup_{||f||_{L_\infty}=1} \left\{\sup_{x\in[0,1]}|T_nf|\right\}\\
+&=\sup_{||f||_{L_\infty}=1} \left\{\left|f\left(\frac{1}{n}\right)\right|\right\}\\
+&\leq 1
+\end{align*}
+So in effect $\{T_n\}\subset D$.
+Now to prove that $\{T_n\}$ doesn't have any convergent subsequence we observe
+that:
+\begin{align*}
+||T_n-T_m||_{\mathcal{A}}
+&=\sup_{||f||_{L_\infty}=1}||T_nf-T_mf||_{L_\infty}\\
+&\geq||T_ng-T_mg||_{L_\infty}\text{ (where $g\equiv 1$)}\\
+&=\left|\left|\delta_{\frac{1}{n}}-\delta_{\frac{1}{m}}\right|\right|_{L_\infty}\\
+&=\sup_{x\in[0,1]}\left|\delta_{\frac{1}{n}}-\delta_{\frac{1}{m}}\right|\\
+&\geq \left|\delta_{\frac{1}{n}}(1/n)-\delta_{\frac{1}{m}}({1/n})\right|\\
+&=|1-0|=1.
+\end{align*}
+Since this is for all $m,n$ we conclude that there cannot be any convergent
+subsequence.
+\section{Problem 2}
+\subsection{Part a}
+\subsection{Part b}
+\subsection{Part c}
+\subsection{Part d}
+\section{Problem 3}
+\section{Problem 4}
+\end{document}
