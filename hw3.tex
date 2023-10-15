@@ -28,7 +28,7 @@ Also it is easy to see that:
 ||T_n||_{\mathcal{A}}=\sup_{||f||_{L_\infty}=1}||T_nf||_{L_\infty}
 &=\sup_{||f||_{L_\infty}=1} \left\{\sup_{x\in[0,1]}|T_nf|\right\}\\
 &=\sup_{||f||_{L_\infty}=1} \left\{\left|f\left(\frac{1}{n}\right)\right|\right\}\\
-&\leq 1
+&= 1
 \end{align*}
 So in effect $\{T_n\}\subset D$.
 Now to prove that $\{T_n\}$ doesn't have any convergent subsequence we observe
@@ -46,6 +46,52 @@ Since this is for all $m,n$ we conclude that there cannot be any convergent
 subsequence.
 \section{Problem 2}
 \subsection{Part a}
+\textbf{Lema 1:} $\int_0^1 |\sin^{(k)}(n\pi x)|^2=cn^{2k}$, for
+some constant c.
+
+\textbf{Proof:} We proceed by induction over $k$ (technically strong
+induction).
+
+For $k=0$ we have:
+$\int_0^1 |\sin^{(0)}(n\pi x)|^2=\frac{1}{2}n^{2\cdot 0}$.
+
+Now for $k+1$ we have
+\begin{align*}
+\int_0^1 |\sin^{(k+1)}(n\pi x)|^2
+&= \int_0^1 |n\pi\cos^{(k)}(n\pi x)|^2\\
+&= \int_0^1 |n^2\pi^2\sin^{(k-1)}(n\pi x)|^2\\
+&= n^4\pi^4\int_0^1 |\sin^{(k-1)}(n\pi x)|^2\\
+&= n^4\pi^4cn^{2(k-1)} \quad \text{(by Induction Hypothesis)}\\
+&= cn^{2(k+1)}.
+\end{align*}
+Which concludes the proof of lema 1.
+Now we remember the fact that $H^k$ is a Hilbert space with the inner product
+\[
+	\langle u,v\rangle_{H^k} = \int uv + \int u'v' + \cdots + \int u^{(k)}v^{(k)}
+\]
+Then if we write $u\in L^2$ as $u=\sum a_n\sin(n\pi x)$ we get that
+\begin{align}
+	\langle u,u\rangle_{H^k} &= \Big\langle \sum a_n\sin(n\pi x), \sum a_n\sin(n\pi x) \Big\rangle_{H^k}\nonumber\\
+	\langle u,u\rangle_{H^k} &= \sum_{n,m}\langle a_n\sin(n\pi x),
+	a_m\sin(m\pi x) \rangle_{H^k}\nonumber\\
+	\langle u,u\rangle_{H^k} &= \sum\langle a_n\sin(n\pi x), a_n\sin(n\pi x) \rangle_{H^k}\nonumber\\
+	\langle u,u\rangle_{H^k} &= \sum ||a_n\sin(n\pi x)||^2_{H^k}\nonumber\\
+	\langle u,u\rangle_{H^k} &= \sum a_n^2||\sin(n\pi x)||^2_{H^k}\label{convergence}.
+\end{align}
+In other words, if we want $u\in H^k$ we need its Fourier coefficients (namely
+$a_n$) to converge to 0 fast enough to make (\ref{convergence}) convergent.
+Using the lema we see that $||\sin(n \pi x)||^2_{H^k}$ has the form
+\[
+	\sum_{i=0}^k c_in^{2i}.
+\]
+Putting this together we conclude the Following:
+
+\textbf{Conclusion:} Let $a_n$ be the Fourier coefficients of $u$, then $u\in
+H^k$ if and only if the series:
+\[
+	\sum n^{2k}a_n^2
+\]
+is convergent.
 \subsection{Part b}
 \subsection{Part c}
 \subsection{Part d}
