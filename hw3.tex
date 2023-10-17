@@ -121,17 +121,28 @@ Computing Fourier coefficients.
 \begin{align*}
 	a_n&=2\int_0^1 u_0(x)\sin(n\pi x)\\
 	  &=2\int_{0.5}^1\sin(n\pi x)\\
-	  &= -\frac{\cos(n\pi x)}{n\pi}\Big|_{0.5}^1\\
-	  &= -\frac{\cos(n\pi)}{n\pi}-\left(-\frac{\cos(0.5n\pi)}{n\pi}\right)
+	  &= -2\frac{\cos(n\pi x)}{n\pi}\Big|_{0.5}^1\\
+	  &= \frac{2}{n\pi}\left(\cos\left(\frac{n\pi}{2}\right)-\cos(n\pi)\right)
 \end{align*}
 \subsection{$u_1$}
+For this one we start by observing that for $n$ even we have $\sin\left(n\pi \left(\frac{1}{2}-x\right)\right)=-\sin\left(n\pi \left(\frac{1}{2}+x\right)\right)$
 \begin{align*}
 	a_n&=2\int_0^1 u_1(x)\sin(n\pi x)\\
-	  &=2\int_{0.5}^1\sin(n\pi x)\\
-	  &= -\frac{\cos(n\pi x)}{n\pi}\Big|_{0.5}^1\\
-	  &= -\frac{\cos(n\pi)}{n\pi}-\left(-\frac{\cos(0.5n\pi)}{n\pi}\right)
+	  &=2\left(\int_0^{0.5}x\sin(n\pi x)+\int_{0.5}^1(1-x)\sin(n\pi x)\right)\\
+	  &=2\left(\int_0^{0.5}x\sin(n\pi x)+\int_{0.5}^1\sin(n\pi x)-\int_{0.5}^1x\sin(n\pi x)\right)\\
+	  &=2\left(\frac{\sin(n\pi x)-n\pi x\cos(n\pi x)}{n^2\pi^2}\Big|_0^{0.5}
+	  -\frac{\cos(n\pi x)}{n\pi}\Big|_{0.5}^1
+	  -\frac{\sin(n\pi x)-n\pi x\cos(n\pi x)}{n^2\pi^2}\Big|_{0.5}^1\right)\\
+	  &=\frac{2}{n^2\pi^2}\left(\sin\left(\frac{n\pi}{2}\right)-n\frac{\pi}{2}\cos\left(\frac{n\pi}{2}\right)\right)\\
+	  &+\frac{2}{n\pi}\left(\cos\left(\frac{n\pi}{2}\right)-\cos(n\pi)\right)\\
+	  &+\frac{2}{n^2\pi^2}\left(\sin\left(\frac{n\pi}{2}\right)-n\frac{\pi}{2}\cos\left(\frac{n\pi}{2}\right)-\sin(n\pi)+n\pi\cos(n\pi)\right).
 \end{align*}
+Now we do separate cases for even and odd $n$.
 \subsection{$u_2$}
+\begin{align*}
+	a_n&=2\int_0^1 x^2(1-x)^2\sin(n\pi x)\\
+	   &=\frac{4(\pi^2 n^2-12)(\cos(n\pi)-1)}{\pi^5n^5}
+\end{align*}
 \subsection{$u_\infty$}
 \subsection{Part d}
 \section{Problem 3}
