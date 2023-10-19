@@ -125,19 +125,29 @@ Computing Fourier coefficients.
 	  &= \frac{2}{n\pi}\left(\cos\left(\frac{n\pi}{2}\right)-\cos(n\pi)\right)
 \end{align*}
 \subsection{$u_1$}
-For this one we start by observing that for $n$ even we have $\sin\left(n\pi \left(\frac{1}{2}-x\right)\right)=-\sin\left(n\pi \left(\frac{1}{2}+x\right)\right)$
+For this one if we try to compute the integral we get a messy thing so it is
+better to exploit the symmetry of the functions around $\frac{1}{2}$.
+
+We start by observing that for $n$ even we have
+\[
+\sin\left(n\pi \left(\frac{1}{2}-x\right)\right)=-\sin\left(n\pi \left(\frac{1}{2}+x\right)\right)
+\]
+i.e. $\sin$ is odd with respect to the
+$x=\frac{1}{2}$ and also notice that $u_1$ is even with respect to
+$x=\frac{1}{2}$, so for $n$ even
+\[
+a_n=2\int_0^1 u_1(x)\sin(n\pi x)=0.
+\]
+Now for $n$ odd we can show in the same way that $\sin(n\pi x)$ is even with
+respect to $x=\frac{1}{2}$, then
 \begin{align*}
 	a_n&=2\int_0^1 u_1(x)\sin(n\pi x)\\
-	  &=2\left(\int_0^{0.5}x\sin(n\pi x)+\int_{0.5}^1(1-x)\sin(n\pi x)\right)\\
-	  &=2\left(\int_0^{0.5}x\sin(n\pi x)+\int_{0.5}^1\sin(n\pi x)-\int_{0.5}^1x\sin(n\pi x)\right)\\
-	  &=2\left(\frac{\sin(n\pi x)-n\pi x\cos(n\pi x)}{n^2\pi^2}\Big|_0^{0.5}
-	  -\frac{\cos(n\pi x)}{n\pi}\Big|_{0.5}^1
-	  -\frac{\sin(n\pi x)-n\pi x\cos(n\pi x)}{n^2\pi^2}\Big|_{0.5}^1\right)\\
-	  &=\frac{2}{n^2\pi^2}\left(\sin\left(\frac{n\pi}{2}\right)-n\frac{\pi}{2}\cos\left(\frac{n\pi}{2}\right)\right)\\
-	  &+\frac{2}{n\pi}\left(\cos\left(\frac{n\pi}{2}\right)-\cos(n\pi)\right)\\
-	  &+\frac{2}{n^2\pi^2}\left(\sin\left(\frac{n\pi}{2}\right)-n\frac{\pi}{2}\cos\left(\frac{n\pi}{2}\right)-\sin(n\pi)+n\pi\cos(n\pi)\right).
+	  &=4\int_0^{0.5}x\sin(n\pi x)\\
+	  &=4\left(\frac{\sin(n\pi x)-n\pi x\cos(n\pi x)}{n^2\pi^2}\Big|_0^{0.5}\right)\\
+	  &=\frac{4}{n^2\pi^2}\left(\sin\left(\frac{n\pi}{2}\right)-\frac{n\pi}{2}\cos\left(\frac{n\pi}{2}\right)\right)\\
+	  &=\frac{4}{n^2\pi^2}\sin\left(\frac{n\pi}{2}\right) \quad \text{(because n is odd)}\\
+	  &=\frac{4}{n^2\pi^2}(-1)^{\frac{n-1}{2}}.
 \end{align*}
-Now we do separate cases for even and odd $n$.
 \subsection{$u_2$}
 \begin{align*}
 	a_n&=2\int_0^1 x^2(1-x)^2\sin(n\pi x)\\
@@ -145,6 +155,43 @@ Now we do separate cases for even and odd $n$.
 \end{align*}
 \subsection{$u_\infty$}
 \subsection{Part d}
+\begin{figure}[ht]
+\caption{Approximations of $u_0$}
+\centering
+\includegraphics[width=0.5\textwidth]{u_0Approx.png}
+\end{figure}
+
+\begin{figure}[ht]
+\caption{Approximations of $u_1$}
+\centering
+\includegraphics[width=0.5\textwidth]{u_1Approx.png}
+\end{figure}
+
+\begin{figure}[ht]
+\caption{Approximations of $u_2$}
+\centering
+\includegraphics[width=0.5\textwidth]{u_2Approx.png}
+\end{figure}
+
 \section{Problem 3}
+\textbf{Lema:} Any closed subset of a compact set is compact.
+
+\textbf{Proof:} Not hard but also not relevant for this exercise.\\
+\textbf{Solution for the exercise:}
+
+We start with a bounded sequence of functions in $H^1$ i.e. $||u_k||_{H^1}\leq M$.
+Without loss of generality we can assume $M=1$ i.e. $||u_k||_{H^1}\leq 1$.
+
+Let $v_k=(v_k^1,v_k^2,\dots)\in l_2$ be the sequence of the Fourier coefficients of $u_k$.
+Using problem 2 we know that $\sum_nn^2(v_k^n)^2\leq c$ and again WLOG we can
+assume $c=1$ i.e. $\sum_nn^2(v_k^n)^2\leq 1$ which implies $|v_k^n|\leq
+\frac{1}{n}$. And because the sequence $a_n=\frac{1}{n}$ is in $l_2$, then from
+a result we saw in class and the previous lema it follows that
+$\overline{\{v_k\}}$ is compact in $L_2$. So there is a subsequence $v_{k_j}$
+that is convergent to an element $v\in \overline{\{v_k\}}\subset l_2$. Using
+the inverse Fourier transform on $v$ we get that there is a function $u\in L_2$
+that satisfies: $\lim_{j\to\infty}||u_{k_j}-u||_{L_2}=0$, i.e.
+$\overline{\{u_k\}}$ is compact.
 \section{Problem 4}
+
 \end{document}
