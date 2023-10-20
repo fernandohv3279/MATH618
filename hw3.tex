@@ -174,22 +174,25 @@ respect to $x=\frac{1}{2}$, then
 \end{figure}
 
 \section{Problem 3}
-\textbf{Reminder:} Any closed subset of a compact set is compact.\\
+For $f\in L_2$ we will use the notation	$\hat f$ to represent the sequence of
+Fourier coefficients of $f$ (notice that $\hat f\in l_2$).\\
 \textbf{Solution to the exercise:}
 
 We start with a bounded sequence of functions in $H^1$ i.e. $||u_k||_{H^1}\leq M$.
-Without loss of generality we can assume $M=1$ i.e. $||u_k||_{H^1}\leq 1$.
-
-Let $v_k=(v_k^1,v_k^2,\dots)\in l_2$ be the sequence of the Fourier coefficients of $u_k$.
-Using problem 2 we know that $\sum_nn^2(v_k^n)^2\leq c$ and again WLOG we can
-assume $c=1$ i.e. $\sum_nn^2(v_k^n)^2\leq 1$ which implies $|v_k^n|\leq
-\frac{1}{n}$. And because the sequence $a_n=\frac{1}{n}$ is in $l_2$, then from
-a result we saw in class and the previous reminder it follows that
-$\overline{\{v_k\}}$ is compact in $L_2$. So there is a subsequence $v_{k_j}$
-that is convergent to an element $v\in \overline{\{v_k\}}\subset l_2$. Using
-the inverse Fourier transform on $v$ we get that there is a function $u\in L_2$
-that satisfies: $\lim_{j\to\infty}||u_{k_j}-u||_{L_2}=0$, i.e.
-$\overline{\{u_k\}}$ is compact.
+Now consider the sequence $\{\hat u_k\}$. From problem 2 we can see that there
+is a positive constant $c$ such that
+\[
+	\sum_nn^2((\hat u_k)_n)^2\leq c ||u_k||_{H_1},
+\]
+then $\sum_nn^2((\hat u_k)_n)^2\leq cM$ which implies $|(\hat u_k)_n|\leq
+\frac{\sqrt{cM}}{n}$. And because the sequence $a_n=\frac{\sqrt{cM}}{n}$ is in
+$l_2$, then from a result we saw in class it follows that $\{\hat
+u_k\}$ is relatively compact in $l_2$. So there is a subsequence
+$\hat u_{k_j}$ that is convergent to an element $\hat u\in \overline{\{\hat u_k\}}\subset
+l_2$. Using the inverse Fourier transform on $\hat u$ we get that there is a
+function $u\in L_2$ that satisfies: $\lim_{j\to\infty}||u_{k_j}-u||_{L_2}=0$
+because of the isometry between $L_2$ and $l_2$ i.e. $\{u_k\}$ is relatively
+compact.
 \section{Problem 4}
 For $f\in L_2$ we will use the notation	$\hat f$ to represent the sequence of
 Fourier coefficients of $f$ (notice that $\hat f\in l_2$). Similarly for a set
@@ -239,6 +242,6 @@ Take a sequence of functions $\{u_k\}\subset S$ and consider the
 corresponding sequence of elements $\{\hat u_k\}\subset \hat S$, by lema 3
 there exists a convergent subsequence $\{\hat u_{k_j}\}$, let $\hat u$ be its
 limit, then consider $u\in l_2$. By the isometry we have between $L_2$ and $l_2$
-we get that $\lim_{j\to \infty}||u_{k_j}-u||=0$ i.e. $S$ is relatively compact
+we get that $\lim_{j\to \infty}||u_{k_j}-u||=0$ i.e. $S$ is relatively compact.
 
 \end{document}
