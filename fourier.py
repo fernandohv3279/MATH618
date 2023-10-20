@@ -1,15 +1,17 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
+def u_inf(x):
+   return np.exp(-1*np.square(np.tan(x*np.pi-np.pi/2)))
+
 def c(n,x):
-   c = np.sin(2*np.pi*x)*np.sin(n*np.pi*x)
+   c = u_inf(x)*np.sin(n*np.pi*x)
    return c.sum()/c.size
 
-n_pts=101
+n_pts=1000001
+n_coeffs=500
 x = np.linspace(0,1,n_pts)
-print(x)
-y = [c(n,x) for n in range(1,10)]
-
-plt.plot(range(1,10),y)
-# plt.plot(y2)
+y = [c(n,x) for n in range(1,n_coeffs,2)]
+plt.yscale("log")
+plt.plot(range(1,n_coeffs,2),y,"*")
 plt.show()
