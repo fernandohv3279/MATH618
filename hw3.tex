@@ -175,7 +175,7 @@ respect to $x=\frac{1}{2}$, then
 
 \section{Problem 3}
 \textbf{Reminder:} Any closed subset of a compact set is compact.\\
-\textbf{Solution for the exercise:}
+\textbf{Solution to the exercise:}
 
 We start with a bounded sequence of functions in $H^1$ i.e. $||u_k||_{H^1}\leq M$.
 Without loss of generality we can assume $M=1$ i.e. $||u_k||_{H^1}\leq 1$.
@@ -191,5 +191,54 @@ the inverse Fourier transform on $v$ we get that there is a function $u\in L_2$
 that satisfies: $\lim_{j\to\infty}||u_{k_j}-u||_{L_2}=0$, i.e.
 $\overline{\{u_k\}}$ is compact.
 \section{Problem 4}
+For $f\in L_2$ we will use the notation	$\hat f$ to represent the sequence of
+Fourier coefficients of $f$ (notice that $\hat f\in l_2$). Similarly for a set
+$A\subset L_2$, $\hat A=\{\hat f\in l_2:f\in A\}$.\\
+\textbf{Lema 1:} If $f\in B$ then $\sqrt{\sum F_n^2}\leq \sqrt{2}$ (We proved
+this in a previous
+homework).\\
+\textbf{Lema 2:} The Fourier coefficients of $-\Delta u$ are $n^2\pi^2 U_n$.
+
+\textbf{Proof:}
+
+\begin{align*}
+	-\frac{d^2}{dx^2}u(x) &= -\frac{d^2}{dx^2}\sum U_n\sin(n\pi x)\\
+			      &= -\sum U_n\frac{d^2}{dx^2}\sin(n\pi x)\\
+	&= \sum n^2\pi^2U_n\sin(n\pi x).
+\end{align*}
+\textbf{Lema 3:} $\hat S$ is relatively compact in $l_2$.
+
+\textbf{Proof:}
+
+Take $\hat u\in \hat S$, by definition there exists $f\in B$ such that
+\[
+	-\Delta u =f,
+\]
+apply the Fourier transform to it and rewrite the equation in terms
+of the Fourier coefficients using lema 2, to get
+\[
+	n^2\pi^2U_n = F_n.
+\]
+Using lema 1 we get
+\[
+	\sum n^4\pi^4U_n^2\leq 2,
+\]
+which is equivalent to:
+\[
+\sum n^4U_n^2\leq \frac{2}{\pi^4}.
+\]
+Let $c=\frac{2}{\pi^4}$, then
+\[
+	|U_n|\leq \frac{\sqrt{c}}{n^2}.
+\]
+Since this is true for all $\hat u\in \hat S$ we can use the result
+we saw in class to conclude that $\hat S$ is relatively compact in $l_2$.\\
+\textbf{Solution to the exercise:}
+
+Take a sequence of functions $\{u_k\}\subset S$ and consider the
+corresponding sequence of elements $\{\hat u_k\}\subset \hat S$, by lema 3
+there exists a convergent subsequence $\{\hat u_{k_j}\}$, let $\hat u$ be its
+limit, then consider $u\in l_2$. By the isometry we have between $L_2$ and $l_2$
+we get that $\lim_{j\to \infty}||u_{k_j}-u||=0$ i.e. $S$ is relatively compact
 
 \end{document}
