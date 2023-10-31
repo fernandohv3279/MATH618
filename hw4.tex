@@ -53,6 +53,8 @@
 \date{\today}
 \maketitle
 \section*{Problem 1}
+For this problem I used the previous homework so a lot of the calculations I
+didn't have to do because we already did them in the previous homework.
 \subsection*{Question 1}
 We want to find $u$ such that:
 \[
@@ -60,7 +62,7 @@ We want to find $u$ such that:
 \]
 so
 \[
-	(\mathcal{L}-\lambda I) u=0
+	(\mathcal{L}-\lambda I) u=0.
 \]
 We know that under this conditions $\sin(n\pi x)$ forms a basis so if we
 identify $u$ with its sequence of Fourier coefficients we get
@@ -87,8 +89,45 @@ The eigenvalues of $\mathcal{L}$ are $\lambda_n=\frac{1}{n^2\pi^2}$.
 \subsection*{Question 3}
 The eigenvalues go to zero.
 \subsection*{Question 4}
+I would speculate that the eigenvalues have to go to 0 because we need the unit
+ball to shrink in higher and higher coordinate directions. The set of
+eigenvalues also has to be bounded because otherwise we would map the unit ball
+to an unbounded set which is not precompact. I think it doesn't matter if the
+functions are single variable or multivariate. The Eigenvalues still need to be
+bounded and have to go to 0 for the operator to be compact (I think).
 \subsection*{Question 5}
+If we had one or three derivatives the eigenfunctions and eigenvalues would be
+different, but I think that the operator would still be compact because a bound
+on the function's derivative + adequate boundary conditions translate into a
+bound for the function. I wrote this same explanation in a bit more detail at
+the end of the next problem.
 \section*{Problem 2}
+For this problem let's assume 0 boundary conditions to make things easy.
+\subsection*{Question 1}
+The eigenfunctions are
+\[
+	\sin(n\pi x)
+\]
+This is done in the exact same way as problem 1, using the result from the
+previous homework we get those eigenfunctions.
+\subsection*{Question 2}
+The eigenvalues are
+\[
+n^2\pi^2.
+\]
+\subsection*{Question 3}
+The eigenvalues go to $\infty$.
+\subsection*{Question 4}
+This operator is not compact, we can see this in the eigenvalues. Another way
+to think about it is that in general a bound for a function doesn't imply a
+bound on the derivative of the function. In general I think differential
+operators are not compact because of the same reason (bound on the function
+doesn't imply bound on the derivative). The inverses of these operators are
+compact because a bound on the function's derivative + adequate boundary
+conditions (for example homogeneous boundary conditions) translates to a bound
+on the function. Intuitively it makes sense because if we bound the derivative
+then we are limiting how much the function can change, that plus the boundary
+conditions allows us to bound the function.
 \section*{Problem 3}
 \subsection*{Question 1}
 We start with a bounded set $A$ and consider its image under the
