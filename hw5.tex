@@ -55,24 +55,44 @@
 \section*{Problem 1}
 \subsection*{$L_1+L_2$ is compact}
 \textbf{Proof:}\\
-Let $x_k$ be a bounded sequence. Since $L_1$ is bounded we can find a
+Let $x_k$ be a bounded sequence. Since $L_1$ is compact we can find a
 subsequence $x_{k_i}$ such that $L_1(x_{k_i})$ converges. Because $x_{k_i}$ is
-also bounded we can find $x_{k_{i_j}}$ such that $L_2(x_{k_{i_j}})$ converges,
-and thus $(L_1+L_2)(x_{k_{i_j}})$ converges.\\
+also bounded we can find $x_{k_{i_j}}$ such that $L_2(x_{k_{i_j}})$ converges
+(because $L_2$ is compact), and thus $(L_1+L_2)(x_{k_{i_j}})$ converges.\\
 \textbf{Conclusion:} any bounded sequence under $L_1+L_2$
 has a convergent subsequence. $\qedsymbol$
 \subsection*{$\alpha L$ is compact}
 \textbf{Proof:}\\
-Let $x_k$ be a bounded sequence. Since $L$ is bounded we can find a subsequence
+Let $x_k$ be a bounded sequence. Since $L$ is compact we can find a subsequence
 $x_{k_i}$ such that $L(x_{k_i})$ converges, then clearly $\alpha
-L(x_{k_i})$ is also convergent, hence $\alpha L$ is compact.
+L(x_{k_i})$ is also convergent, hence $\alpha L$ is compact. $\qedsymbol$
 \section*{Problem 2}
 \textbf{Proof:}\\
-Let $x_k$ be a bounded sequence. Since $A$ is bounded we can find a
+Let $x_k$ be a bounded sequence. Since $A$ is compact we can find a
 subsequence $x_{k_i}$ such that $A(x_{k_i})$ converges. Because $x_{k_i}$ is
-also bounded we can find $x_{k_{i_j}}$ such that $B(x_{k_{i_j}})$ converges,
-and thus $AB(x_{k_{i_j}})$ converges. $\qedsymbol$
+also bounded we can find $x_{k_{i_j}}$ such that $B(x_{k_{i_j}})$ converges
+(because $B$ is compact), and thus $AB(x_{k_{i_j}})$ converges. $\qedsymbol$
 \section*{Problem 3}
+\subsection*{Part a}
+This operator is bounded because of Parseval's identity, i.e.
+\[
+	||f||_X = C ||Lf||_Y
+\]
+for some constant $C$. So any bounded sequence will be mapped to a
+bounded sequence.
+\subsection*{Part b}
+This operator is bounded because of Parseval's identity, i.e.
+\[
+	||f||_Y=C||L^{-1}f||_X
+\]
+for some constant $C$. So any bounded sequence will be mapped to a
+bounded sequence.
+\subsection*{Part c}
+$L$ is not compact because if we take $\{x_k\}$ where $x_k=\sin(kt)$ (bounded)
+this sequences gets mapped to $\{e_k\}$ which we know is not precompact.
+
+$L^{-1}$ is not compact basically for the same reason, $\{e_k\}$ (bounded) gets
+mapped to $\{\sin(kt)\}$ which again we know is not precompact.
 \section*{Problem 4}
 \section*{Problem 5}
 \end{document}
