@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}%
+\usepackage{amsfonts}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{comment}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2.2cm, right=2.2cm]%
+{geometry}
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage{amsthm}
+%\usepackage{changepage}
+\usepackage{amssymb}
+%\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\begin{document}
+
+\title{MATH618 Homework 5}
+\author{Fernando}
+\date{\today}
+\maketitle
+\section*{Problem 1}
+\subsection*{$L_1+L_2$ is compact}
+\textbf{Proof:}\\
+Let $x_k$ be a bounded sequence. Since $L_1$ is bounded we can find a
+subsequence $x_{k_i}$ such that $L_1(x_{k_i})$ converges. Because $x_{k_i}$ is
+also bounded we can find $x_{k_{i_j}}$ such that $L_2(x_{k_{i_j}})$ converges,
+and thus $(L_1+L_2)(x_{k_{i_j}})$ converges.\\
+\textbf{Conclusion:} any bounded sequence under $L_1+L_2$
+has a convergent subsequence. $\qedsymbol$
+\subsection*{$\alpha L$ is compact}
+\textbf{Proof:}\\
+Let $x_k$ be a bounded sequence. Since $L$ is bounded we can find a subsequence
+$x_{k_i}$ such that $L(x_{k_i})$ converges, then clearly $\alpha
+L(x_{k_i})$ is also convergent, hence $\alpha L$ is compact.
+\section*{Problem 2}
+\section*{Problem 3}
+\section*{Problem 4}
+\section*{Problem 5}
+\end{document}
