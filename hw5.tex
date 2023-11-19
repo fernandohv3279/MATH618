@@ -94,5 +94,33 @@ this sequences gets mapped to $\{e_k\}$ which we know is not precompact.
 $L^{-1}$ is not compact basically for the same reason, $\{e_k\}$ (bounded) gets
 mapped to $\{\sin(kt)\}$ which again we know is not precompact.
 \section*{Problem 4}
+We want to estimate (find a bound for)
+\[
+	A_k
+	=\frac{||y_k-\tilde{y}_k||}{||y_k||}\bigg/\frac{||x_k-\tilde{x}_k||}{||x_k||}
+	=\frac{||y_k-\tilde{y}_k||\cdot||x_k||}{||y_k||\cdot||x_k-\tilde{x}_k||}
+	=\frac{||y_k-\tilde{y}_k||}{||x_k-\tilde{x}_k||} \cdot
+	\frac{||x_k||}{||y_k||}
+	=\frac{||L(\delta x_k)||}{||\delta x_k||} \cdot \frac{||x_k||}{||L(x_k)||}
+\]
+Then
+\[
+A_k=\frac{||L(\delta x_k)||}{||\delta x_k||} \cdot \frac{||x_k||}{||L(x_k)||}\leq
+||L||\cdot \frac{||x_k||}{||L(x_k)||}
+\]
+For simplicity let's assume that $L$ is invertible (otherwise I am not sure how
+to proceed), then we have
+\[
+A_k\leq
+||L||\cdot \frac{||L^{-1}(x_k)||}{||x_k||} \leq ||L|| \cdot ||L^{-1}||.
+\]
+If $L$ was not bounded then $A_k \to \infty$ as $k \to \infty$ and that means
+that small errors in our measurements will be amplified greatly as we increase
+the dimension. This means that our end result \textbf{could} be completely
+useless. That is why we need $L$ to be bounded.
+
+In regards to $L^{-1}$ there is a theorem (bounded inverse theorem) that
+ensures that under appropriate conditions if $L$ is a bijective bounded linear
+operator then $L^{-1}$ is also bounded.
 \section*{Problem 5}
 \end{document}
