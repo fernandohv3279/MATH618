@@ -1,0 +1,97 @@
+Can one hear
+the shape of
+a drum?
+
+Mark Kac (1966)
+
+Simpler question
+
+Can one hear
+the length
+of a string?
+
+Intuitively
+
+Mathematically
+
+Let F(x,t) be the vertical displacement
+of the string at position x and time t
+
+
+∂²F/∂t²=c²∂²F/∂x²
+
+∂²F/∂t²=∂²F/∂x²
+
+F(x,t)=g(x)h(t)
+
+g''(x)/g(x)=h''(t)/h(t)
+
+g''(x)/g(x)=h''(t)/h(t)=𝝺
+
+g''(x)/g(x)=h''(t)/h(t)=-𝝺
+
+g''(x)=-𝝺g(x)
+h''(t)=-𝝺h(t)
+
+g''(x)=-𝝺g(x)
++ Dirichlet BC
+
+g(x)=Asin(√𝝺 x)
+
+𝝺=n²𝝿²/L²
+for n=1,2,3,...
+
+h''(t)=-𝝺h(t)
+
+h(t)=Bcos(√𝝺 t) + Csin(√𝝺 t)
+
+Remember F(x,t)=g(x)h(t)
+
+Frequencies at which the
+string can vibrate are
+√𝝺/2𝝿=n/2L for n=1,2,3,...
+
+Answer: yes!
+
+Can one hear
+the shape of
+a drum?
+
+∂²F/∂t²=∆F
+
+...
+
+∆g(x,y)=-𝝺g(x,y)
+h''(t)=-𝝺h(t)
+
+Answer: maybe
+
+What can we hear?
+
+Area
+
+Perimeter
+
+One can hear
+circles!
+
+P²≥4𝝿A
+
+Next step
+
+Can one hear
+the shape of
+a manifold?
+
+Toshikazu Sunada (1984)
+
+Pierre Bérard (1989)
+
+Gordon, Webb and Wolpert (1990)
+
+@isodrums.png
+
+Why is this relevant?
+
+@1starshaped.webp
+
