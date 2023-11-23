@@ -24,11 +24,13 @@ Can one hear
 the shape of
 a manifold?
 
-@bet.png
+Next step
 
-One can hear the
-connectivity
-of a drum
+@intro.png
+
+Why is Mark's article famous?
+
+@bet.png
 
 L²≥4𝝿|𝛀| 
 
@@ -50,32 +52,32 @@ a drum
 
 What can we hear?
 
-Importance of Mark's article
-
-"To find out the different tunes sent out by a vibrating system is a
- problem which may or may not be solvable in certain special cases,
- but it would baffle the most skillful mathematician to solve the
- inverse problem and to find out the shape of a bell by means of the
- sounds which it is cable of sending out."
- -Arthur Schuster, 1882.
-
-@Arthur_Schuster.jpg
-
 Maybe
 
 Can one hear
 the shape of
 a drum?
 
-Yes!
+Answer: yes!
+
+Frequencies at which the
+string can vibrate are
+√𝝺/2𝝿=n/2L for n=1,2,3,...
+
+𝝺=n²𝝿²/L²
+for n=1,2,3,...
+
+g''(x)=-𝝺g(x)
+
+Mathematically
+
+Intuitively
 
 Can one hear
 the length
 of a string?
 
 Simpler question
-
-@intro.png
 
 @Mark_Kac.jpg
 
